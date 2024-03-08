@@ -19,6 +19,7 @@ function search(term: string): void {
   const img: HTMLImageElement | null = document.querySelector('img');
   if (!img) return;
 
+  // Free key, yoink if you want.
   fetch(`https://api.giphy.com/v1/gifs/translate?api_key=47H0mK3fiGD1Jz6MXFG76sZSoHajT5Dp&s=${term}`, { mode: 'cors' })
     .then(function(response) {
       return response.json();
