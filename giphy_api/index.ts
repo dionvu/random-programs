@@ -12,14 +12,22 @@ form.addEventListener('submit', (event) => {
   term = input.value;
   search(term);
   form.reset();
-  console.log(term);
 });
 
+async function search(term: string) {
+  const img: HTMLImageElement | null = document.querySelector('img');
+  if (!img) return;
+
+  const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=47H0mK3fiGD1Jz6MXFG76sZSoHajT5Dp&s=${term}`, { mode: 'cors' });
+  const data = await response.json();
+  img.src = data.data.images.original.url;
+};
+
+/*
 function search(term: string): void {
   const img: HTMLImageElement | null = document.querySelector('img');
   if (!img) return;
 
-  // Free key, yoink if you want.
   fetch(`https://api.giphy.com/v1/gifs/translate?api_key=47H0mK3fiGD1Jz6MXFG76sZSoHajT5Dp&s=${term}`, { mode: 'cors' })
     .then(function(response) {
       return response.json();
@@ -31,3 +39,4 @@ function search(term: string): void {
       console.error('Error fetching data:', error);
     });
 };
+*/
