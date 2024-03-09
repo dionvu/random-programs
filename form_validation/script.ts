@@ -1,3 +1,9 @@
+/**
+ * Simple one input form that uses only javascript validation instead of html default validation.
+ *
+ * @date 2024 March 8
+ */
+
 const mailInput = document.getElementById('mail') as HTMLInputElement;
 const mailError = document.getElementById('error-mail') as HTMLSpanElement;
 const form = document.querySelector('form') as HTMLFormElement;
