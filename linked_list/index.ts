@@ -153,20 +153,3 @@ console.log(`Length: ${list.length}`);
 console.log(`${list.tail?.val}`);
 console.log(list.at(2));
 console.log();
-
-console.log(list.to_string());
-
-console.log();
-
-list.pop();
-console.log(list.to_string());
-
-if (list.contains(2000)) {
-  console.log("YES");
-}
-else {
-  console.log("NEIN");
-}
-
-list.insert_at(999, 1);
-console.log(list.to_string());
