@@ -3,7 +3,6 @@
  * @date 2024 Apr 1
  */
 
-
 export class Node<T> {
   constructor() {
     this.next = null;
